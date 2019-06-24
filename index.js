@@ -1,20 +1,12 @@
 const express = require('express');
 const path = require('path');
-
+const port = process.env.PORT || 3001;
 const app = express();
-
-//Serving the static files from react-app
+// the __dirname is the current directory from where the script is running
+app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-const targetUrl = 'http://localhost:3000';
-
-function handleRedirect(req, res) {
-    res.redirect(targetUrl);
-}
-
-app.get('*', handleRedirect);
-
-const port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log(`App is listening on port : ${port}`)
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+app.listen(port , '0.0.0.0');
