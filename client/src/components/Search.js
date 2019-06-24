@@ -102,7 +102,7 @@ class Search extends Component {
 
             <Row>
               <Col>
-                {this.state.hasError ? (<div style={{ color: 'red' }}>Both the fields are required. Please input the values and then continue your search<br />Ex : Mission SoI : 100, Camera : FHAZ</div>) : (<div>huhu{lists}</div>)}
+                {this.state.hasError ? (<div style={{ color: 'red' }}>Both the fields are required. Please input the values and then continue your search<br />Ex : Mission SoI : 100, Camera : FHAZ</div>) : (<div>{lists}</div>)}
               </Col>
             </Row>
           </Container>
