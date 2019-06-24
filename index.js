@@ -6,12 +6,13 @@ const app = express();
 //Serving the static files from react-app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-//trial endpoint
-app.get('/api/trial', (req,res) => {
-    var list = ["item1", "item2", "item3"];
-    res.json(list);
-    console.log('Sent list of items');
-});
+const targetUrl = 'http://localhost:3000';
+
+function handleRedirect(req, res) {
+    res.redirect(targetUrl);
+}
+
+app.get('*', handleRedirect);
 
 const port = process.env.PORT || 5000;
 app.listen(port);
