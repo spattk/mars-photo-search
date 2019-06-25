@@ -59,7 +59,7 @@ class Search extends Component {
                 <Form.Group as={Row} controlId="formPlaintextEmail">
                   <Form.Label column md={4} >
 
-                    Mission SoI <br /> <span style={{ color: 'red', fontWeight: 'bold' }}> Integer > 0 </span>
+                    Mission SoI <br /> <span style={{ color: 'red', fontWeight: 'bold' }}> Integer >= 0 </span>
 
                   </Form.Label>
                   <Col>
