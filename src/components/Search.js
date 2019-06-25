@@ -55,9 +55,9 @@ class Search extends Component {
           <Container>
 
             <Row>
-              <Col className='col-md-5 '>
+              <div className='col-md-5 col-sm-12 col-xs-6'>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column md={4} >
+                  <Form.Label column md={4}>
 
                     Mission SoI <br /> <span style={{ color: 'red', fontWeight: 'bold' }}> Integer >= 0 </span>
 
@@ -66,9 +66,9 @@ class Search extends Component {
                     <Form.Control required type="number" name="msoi" value={this.state.msoi} onChange={this.onChange} />
                   </Col>
                 </Form.Group>
-              </Col>
+              </div>
 
-              <Col className='col-md-5'>
+              <div className='col-md-5 col-sm-12 col-xs-6'>
                 <Form.Group as={Row} controlId="formBasicPassword" >
                   <Form.Label column md={2}>Camera</Form.Label>
                   <Col>
@@ -91,13 +91,13 @@ class Search extends Component {
                     </Dropdown>
                   </Col>
                 </Form.Group>
-              </Col>
+              </div>
 
-              <Col className='col-md-2'>
+              <div className='col-md-2 col-sm-6'>
                 <Button onClick={() => { this.onSearchClick(this.state.msoi, this.state.camera) }}>
                   {this.state.btnContent}
                 </Button>
-              </Col>
+              </div>
             </Row>
 
             <Row>
